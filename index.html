@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Kaoba</title>
+    <meta name="viewport" content="width = device-width, minimum-scale=1, maximum-scale=1, user-scalable = no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- External JS dependencies -->
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+    <script type="text/javascript" src="js/backbone-min.js"></script>
+
+    <!-- Turn.js UI Kit -->
+    <script type="text/javascript" src="js/turn.min.js"></script>
+
+    <!-- App dependencies -->
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <!-- External CSS dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <main class="catalog-app">
+        <div id="viewer">
+            <div id="flipbook" class="ui-flipbook">
+                <!-- Do not place the content here -->
+
+                <img src="imagenes/ca-01.jpg" alt="Imagen">
+                <img src="imagenes/ca-02.jpg" alt="Imagen">
+                <img src="imagenes/ca-03.jpg" alt="Imagen">
+                <img src="imagenes/ca-04.jpg" alt="Imagen">
+                <img src="imagenes/ca-05.jpg" alt="Imagen">
+                <img src="imagenes/ca-06.jpg" alt="Imagen">
+                <img src="imagenes/ca-07.jpg" alt="Imagen">
+                <img src="imagenes/ca-08.jpg" alt="Imagen">
+                <img src="imagenes/ca-09.jpg" alt="Imagen">
+                <img src="imagenes/ca-10.jpg" alt="Imagen">
+                <img src="imagenes/ca-11.jpg" alt="Imagen">
+                <img src="imagenes/ca-12.jpg" alt="Imagen">
+                <img src="imagenes/ca-13.jpg" alt="Imagen">
+                <img src="imagenes/ca-14.jpg" alt="Imagen">
+                <img src="imagenes/ca-15.jpg" alt="Imagen">
+                <a ignore="1" class="ui-arrow-control ui-arrow-next-page"></a>
+                <a ignore="1" class="ui-arrow-control ui-arrow-previous-page"></a>
+            </div>
+        </div>
+
+        <!-- controls -->
+        <div id="controls">
+            <div class="all">
+                <div class="ui-slider" id="page-slider">
+                    <div class="bar">
+                        <div class="progress-width">
+                            <div class="progress">
+                                <div class="handler"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-options" id="options">
+                    <a class="ui-icon" id="ui-icon-table-contents">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <a class="ui-icon show-hint" title="Miniaturas" id="ui-icon-miniature">
+                        <i class="fa fa-th"></i>
+                    </a>
+                    <a class="ui-icon" id="ui-icon-zoom">
+                        <i class="fa fa-search-plus"></i>
+                    </a>
+                    <a class="ui-icon show-hint" title="Compartir" id="ui-icon-share">
+                        <i class="fa fa-share"></i>
+                    </a>
+                    <a class="ui-icon show-hint" title="Pantalla Completa" id="ui-icon-full-screen">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a class="ui-icon show-hint" id="ui-icon-toggle">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </a>
+                </div>
+
+                <!-- zoom slider -->
+                <div id="zoom-slider-view" class="zoom-slider">
+                    <div class="bg">
+                        <div class="ui-slider" id="zoom-slider">
+                            <div class="bar">
+                                <div class="progress-width">
+                                    <div class="progress">
+                                        <div class="handler"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / zoom slider -->
+            </div>
+
+            <div id="ui-icon-expand-options">
+                <a class="ui-icon show-hint">
+                    <i class="fa fa-ellipsis-h"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- miniatures -->
+        <div id="miniatures" class="ui-miniatures-slider">
+        </div>
+
+        <!-- / miniatures -->
+
+    </main>
+    <script type="text/javascript">
+        // Change these settings
+
+        FlipbookSettings = {
+            options: {
+                pageWidth: 1500,
+                pageHeight: 1500,
+                //pages: 12
+            },
+            shareMessage: 'Introducing turn.js 5 - HTML5 Library for Flipbooks.',
+            pageFolder: 'miniaturas/min-',
+        };
+    </script>
+</body>
+
+</html>
